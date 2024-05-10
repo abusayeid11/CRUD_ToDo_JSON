@@ -9,16 +9,6 @@ const app = express();
 
  let data = JSON.parse(fs.readFileSync('data.json'))
 
-
-app.get('/task', (req, res)=>{
-   try {
-      res.status(201).send(data);
-
-   } catch (error) {
-      res.status(404).json({message: error.message})
-   }
-})
-
 app.post('/task', (req, res)=>{
      try {
         const newTask = {
@@ -36,6 +26,25 @@ app.post('/task', (req, res)=>{
         res.status(404).json({message: error.message})
      }
 })
+
+
+app.get('/task', (req, res)=>{
+    try {
+       res.status(201).send(data);
+ 
+    } catch (error) {
+       res.status(404).json({message: error.message})
+    }
+ })
+
+app.get('/task/sortById', (req, res) => {
+    try {
+      const sortedTasks = data.slice().sort((a, b) => a.id - b.id);
+      res.status(201).json(sortedTasks);
+    } catch (error) {
+      res.status(404).json({ message: 'Task not found' });
+    }
+  });
 
 app.get('/task/search', (req, res)=>{
     try {

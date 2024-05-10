@@ -3,18 +3,18 @@
     "id": 1,
     "title": "homework",
     "status": "incomplete",
-    "description": "kaaj"
+    "description": "assignment on ai"
   },
   {
     "id": 2,
     "title": "coding",
     "status": "in progress",
-    "description": "must"
+    "description": "develop an application"
   },
   {
     "id": 4,
     "title": "sleep",
-    "description": "important",
-    "status": "incomplete"
+    "description": "sharp 10 pm",
+    "status": "pending"
   }
 ]
