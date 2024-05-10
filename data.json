@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "homework",
-    "status": "incomplete",
+    "status": "pending",
     "description": "assignment on ai"
   },
   {
@@ -10,11 +10,5 @@
     "title": "coding",
     "status": "in progress",
     "description": "develop an application"
-  },
-  {
-    "id": 4,
-    "title": "sleep",
-    "description": "sharp 10 pm",
-    "status": "pending"
   }
 ]
